@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Wind Rating Guide for Phoenix Gazebos & Pergolas — Sonoran Structures</title>
+<meta name="description" content="The only wind rating guide built from real Phoenix monsoon installs. Learn which gazebos and pergolas actually hold up in Arizona's monsoon season — from the team that's installed over 500 of them."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* ─── SONORAN STRUCTURES — SHARED STYLES ─── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --clay:   #C4622D;
+  --clay2:  #A84F1E;
+  --iron:   #1A2332;
+  --iron2:  #0f1520;
+  --sand:   #F5EFE4;
+  --sand2:  #EDE3D4;
+  --mid:    #6B7280;
+  --green:  #4caf82;
+  --white:  #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', system-ui, sans-serif; background: var(--sand); color: var(--iron); }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+/* ─── NAV ─── */
+#site-nav { position: sticky; top: 0; z-index: 100; background: var(--iron); border-bottom: 1px solid rgba(255,255,255,0.07); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 5vw; height: 62px; max-width: 1400px; margin: 0 auto; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 700; color: var(--clay); letter-spacing: 0.04em; }
+.nav-logo span { color: white; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { color: rgba(255,255,255,0.55); font-size: 0.78rem; letter-spacing: 0.04em; transition: color 0.15s; }
+.nav-links a:hover, .nav-links a.active { color: white; }
+.nav-cta { background: var(--clay) !important; color: white !important; padding: 8px 20px; border-radius: 3px; font-weight: 600; font-size: 0.75rem !important; letter-spacing: 0.06em; transition: background 0.15s !important; }
+.nav-cta:hover { background: var(--clay2) !important; }
+
+/* ─── FOOTER ─── */
+#site-footer { background: var(--iron2); padding: 60px 5vw 30px; }
+.footer-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 2fr; gap: 60px; margin-bottom: 40px; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--clay); margin-bottom: 10px; }
+.footer-logo span { color: white; }
+.footer-tagline { font-size: 0.82rem; color: rgba(255,255,255,0.35); margin-bottom: 6px; }
+.footer-sub { font-size: 0.72rem; color: rgba(255,255,255,0.2); }
+.footer-links { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.footer-col { display: flex; flex-direction: column; gap: 8px; }
+.footer-col-head { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 4px; }
+.footer-col a { font-size: 0.78rem; color: rgba(255,255,255,0.4); transition: color 0.15s; }
+.footer-col a:hover { color: rgba(255,255,255,0.75); }
+.footer-bottom { max-width: 1400px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 0.68rem; color: rgba(255,255,255,0.2); text-align: center; }
+
+/* ─── PRODUCT CARD ─── */
+.product-card { background: white; border: 1px solid rgba(0,0,0,0.07); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.2s; }
+.product-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.card-head { padding: 16px 16px 12px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.card-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+.badge-cert { font-size: 0.63rem; padding: 2px 8px; border-radius: 20px; letter-spacing: 0.06em; white-space: nowrap; }
+.badge-dealer { font-size: 0.63rem; padding: 2px 8px; border-radius: 20px; background: rgba(196,98,45,0.1); color: var(--clay); border: 1px solid rgba(196,98,45,0.25); }
+.card-brand { font-size: 0.67rem; color: var(--clay); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px; }
+.card-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--iron); line-height: 1.2; margin-bottom: 4px; }
+.card-size { font-size: 0.72rem; color: var(--mid); }
+.card-wind { padding: 12px 16px; background: var(--sand); border-bottom: 1px solid rgba(0,0,0,0.05); }
+.wind-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.wind-mph { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; }
+.wind-label { font-size: 0.65rem; font-weight: 600; }
+.wind-bar-track { height: 4px; background: rgba(0,0,0,0.08); border-radius: 2px; overflow: hidden; margin-bottom: 4px; }
+.wind-bar-fill { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
+.wind-note { font-size: 0.62rem; color: var(--mid); opacity: 0.7; }
+.card-prices { padding: 12px 16px; display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.prices-label { font-size: 0.62rem; color: var(--mid); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 3px; }
+.price-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 10px; border-radius: 3px; border: 1px solid rgba(0,0,0,0.06); background: rgba(0,0,0,0.015); cursor: pointer; transition: all 0.15s; text-align: left; width: 100%; }
+.price-row:hover { background: rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.12); }
+.price-best { background: rgba(196,98,45,0.06) !important; border-color: rgba(196,98,45,0.2) !important; }
+.price-best:hover { background: rgba(196,98,45,0.12) !important; }
+.price-retailer { font-size: 0.74rem; color: var(--mid); }
+.price-val { font-size: 0.78rem; font-weight: 700; color: var(--iron); }
+.price-best .price-val { color: var(--clay); }
+.dealer-note { margin-top: 6px; padding: 8px 10px; background: rgba(196,98,45,0.06); border: 1px solid rgba(196,98,45,0.15); border-radius: 3px; font-size: 0.7rem; color: var(--clay); cursor: pointer; text-align: center; }
+
+/* ─── PRODUCT GRID ─── */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+/* ─── PURCHASE MODAL ─── */
+#purchase-modal { position: fixed; inset: 0; z-index: 200; display: flex; align-items: flex-start; justify-content: center; padding: 20px; overflow-y: auto; background: rgba(0,0,0,0); pointer-events: none; transition: background 0.2s; }
+#purchase-modal.open { background: rgba(0,0,0,0.82); pointer-events: all; backdrop-filter: blur(6px); }
+#purchase-modal.open .modal-box { transform: translateY(0); opacity: 1; }
+.modal-box { background: var(--iron); border-radius: 8px; max-width: 560px; width: 100%; margin: auto; transform: translateY(20px); opacity: 0; transition: all 0.25s; box-shadow: 0 24px 80px rgba(0,0,0,0.5); }
+.modal-header { padding: 22px 28px 18px; border-bottom: 1px solid rgba(255,255,255,0.08); position: relative; }
+.modal-eyebrow { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); margin-bottom: 7px; }
+.modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 700; color: white; margin-bottom: 4px; }
+.modal-sub { font-size: 0.74rem; color: rgba(255,255,255,0.4); }
+.modal-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: rgba(255,255,255,0.4); font-size: 1.5rem; cursor: pointer; line-height: 1; padding: 4px; }
+.modal-body { padding: 20px 28px 24px; }
+.modal-badge-bd, .modal-badge-gen { display: flex; gap: 12px; padding: 13px; border-radius: 5px; margin-bottom: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.5); line-height: 1.55; }
+.modal-badge-bd { background: rgba(196,98,45,0.1); border: 1px solid rgba(196,98,45,0.25); }
+.modal-badge-gen { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); }
+.modal-badge-bd strong, .modal-badge-gen strong { color: white; display: block; margin-bottom: 2px; font-size: 0.78rem; }
+.modal-table { border: 1px solid rgba(255,255,255,0.08); border-radius: 5px; overflow: hidden; margin-bottom: 16px; font-size: 0.75rem; }
+.modal-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 14px; gap: 10px; color: rgba(255,255,255,0.5); }
+.modal-row.alt { background: rgba(255,255,255,0.02); }
+.modal-row.subtotal { background: rgba(255,255,255,0.06); border-top: 1px solid rgba(255,255,255,0.08); color: white; font-weight: 600; }
+.modal-section-head { padding: 5px 14px; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.modal-section-head.red { color: rgba(255,80,80,0.7); background: rgba(255,50,50,0.07); border-top: 1px solid rgba(255,80,80,0.18); }
+.modal-section-head.green { color: var(--clay); background: rgba(196,98,45,0.08); border-top: 1px solid rgba(196,98,45,0.2); }
+.modal-row.red-alt { background: rgba(255,40,40,0.04); border-bottom: 1px solid rgba(255,80,80,0.07); }
+.modal-row.red-dim { background: rgba(255,40,40,0.02); }
+.modal-row.red-total { background: rgba(255,60,60,0.12); border-top: 1px solid rgba(255,80,80,0.2); color: rgba(255,200,200,0.85); font-weight: 700; }
+.red-val { color: rgba(255,100,100,0.95); font-weight: 700; flex-shrink: 0; }
+.clay-val { color: var(--clay); font-weight: 700; flex-shrink: 0; }
+.green-val { color: var(--green); font-weight: 700; flex-shrink: 0; }
+.modal-row em { font-style: normal; font-size: 0.62rem; color: rgba(255,255,255,0.25); }
+.modal-total-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: rgba(76,175,130,0.1); border-top: 1px solid rgba(76,175,130,0.2); }
+.total-label { font-size: 0.78rem; font-weight: 700; color: var(--green); }
+.total-save { font-size: 0.62rem; color: rgba(76,175,130,0.5); margin-top: 2px; }
+.total-amount { font-size: 1.1rem; font-weight: 800; color: var(--green); }
+.anch-toggle { width: 42px; height: 22px; border-radius: 11px; background: rgba(255,255,255,0.1); cursor: pointer; position: relative; transition: background 0.2s; flex-shrink: 0; }
+.anch-toggle.on { background: var(--clay); }
+.anch-knob { position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: white; transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+.anch-toggle.on .anch-knob { left: 23px; }
+.modal-cta-primary { display: block; width: 100%; padding: 15px; background: var(--clay); color: white; border: none; border-radius: 4px; font-size: 0.9rem; font-weight: 800; cursor: pointer; text-align: center; letter-spacing: 0.02em; margin-bottom: 10px; transition: background 0.2s; font-family: 'Jost', sans-serif; }
+.modal-cta-primary:hover { background: var(--clay2); }
+.modal-cta-secondary { display: block; width: 100%; padding: 11px; background: transparent; color: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; font-size: 0.76rem; cursor: pointer; text-align: center; transition: all 0.15s; font-family: 'Jost', sans-serif; }
+.modal-cta-secondary:hover { color: rgba(255,255,255,0.65); border-color: rgba(255,255,255,0.25); }
+.modal-note { font-size: 0.66rem; color: rgba(255,255,255,0.2); text-align: center; margin-top: 12px; }
+
+/* ─── CATEGORY HERO ─── */
+.cat-hero { background: var(--iron); padding: 60px 5vw 50px; }
+.cat-hero-inner { max-width: 1400px; margin: 0 auto; }
+.cat-breadcrumb { font-size: 0.72rem; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.cat-breadcrumb a { color: rgba(255,255,255,0.4); }
+.cat-breadcrumb span { color: rgba(255,255,255,0.2); margin: 0 6px; }
+.cat-eyebrow { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin-bottom: 10px; }
+.cat-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,3rem); font-weight: 700; color: white; margin-bottom: 12px; }
+.cat-hero-desc { font-size: 0.9rem; color: rgba(255,255,255,0.5); max-width: 560px; line-height: 1.7; margin-bottom: 24px; }
+.cat-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+.cat-stat { text-align: left; }
+.cat-stat-val { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--clay); }
+.cat-stat-lab { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 2px; }
+
+/* ─── SECTION STYLES ─── */
+.section-wrap { max-width: 1400px; margin: 0 auto; padding: 60px 5vw; }
+.section-eyebrow { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); margin-bottom: 10px; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem,3.5vw,2.6rem); font-weight: 700; color: var(--iron); margin-bottom: 12px; }
+.section-sub { font-size: 0.88rem; color: var(--mid); max-width: 580px; line-height: 1.7; margin-bottom: 32px; }
+
+/* ─── WIND LEGEND ─── */
+.wind-legend { background: var(--sand2); border: 1px solid rgba(0,0,0,0.07); border-radius: 4px; padding: 18px 22px; margin-bottom: 32px; }
+.wind-legend-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--iron); margin-bottom: 6px; }
+.wind-legend-sub { font-size: 0.76rem; color: var(--mid); line-height: 1.65; margin-bottom: 14px; max-width: 600px; }
+.wind-dots { display: flex; flex-wrap: wrap; gap: 16px; }
+.wind-dot-item { display: flex; align-items: center; gap: 7px; font-size: 0.73rem; color: var(--mid); }
+.wind-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* ─── UTILITY ─── */
+.page-wrap { max-width: 1400px; margin: 0 auto; }
+.eyebrow { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width: 768px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-links { grid-template-columns: 1fr 1fr; }
+  .products-grid { grid-template-columns: 1fr; }
+  .modal-body { padding: 16px 18px 20px; }
+  .modal-header { padding: 18px 18px 14px; }
+}
+@media(max-width: 480px) {
+  .footer-links { grid-template-columns: 1fr; }
+  .cat-stats { gap: 20px; }
+}
+
+/* ─── WIND GUIDE STYLES ─── */
+.guide-hero { background:var(--iron); padding:80px 5vw 70px; }
+.guide-hero-inner { max-width:800px; margin:0 auto; text-align:center; }
+.guide-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4.5vw,3.2rem); font-weight:700; color:white; line-height:1.1; margin-bottom:16px; }
+.guide-hero h1 em { color:var(--clay); font-style:italic; }
+.guide-hero p { font-size:.92rem; color:rgba(255,255,255,.5); line-height:1.75; max-width:580px; margin:0 auto 28px; }
+.guide-meta { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; }
+.guide-meta-item { font-size:.7rem; color:rgba(255,255,255,.35); letter-spacing:.08em; }
+.guide-meta-item strong { color:rgba(255,255,255,.6); }
+
+/* GUIDE BODY */
+.guide-body { max-width:800px; margin:0 auto; padding:60px 5vw; }
+.guide-body h2 { font-family:'Cormorant Garamond',serif; font-size:1.9rem; font-weight:700; color:var(--iron); margin:48px 0 14px; padding-top:48px; border-top:1px solid rgba(0,0,0,.08); }
+.guide-body h2:first-of-type { margin-top:0; padding-top:0; border-top:none; }
+.guide-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:700; color:var(--iron); margin:28px 0 10px; }
+.guide-body p { font-size:.88rem; color:var(--mid); line-height:1.8; margin-bottom:16px; }
+.guide-body p strong { color:var(--iron); }
+.guide-body ul { padding-left:20px; margin-bottom:16px; }
+.guide-body ul li { font-size:.86rem; color:var(--mid); line-height:1.75; margin-bottom:6px; }
+.guide-body ul li strong { color:var(--iron); }
+
+/* RATING CARDS */
+.rating-cards { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:28px 0; }
+.rating-card { border-radius:6px; overflow:hidden; border:1px solid rgba(0,0,0,.07); }
+.rating-card-head { padding:18px 20px 14px; }
+.rating-card-head h3 { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:700; color:white; margin:8px 0 4px; }
+.rating-card-head .rating-mph { font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+.rating-card-body { padding:16px 20px; background:white; }
+.rating-card-body p { font-size:.78rem; color:var(--mid); line-height:1.65; margin-bottom:8px; }
+.rating-card-body p:last-child { margin-bottom:0; }
+.rating-tag { display:inline-block; font-size:.62rem; padding:2px 8px; border-radius:20px; margin-bottom:10px; font-weight:600; letter-spacing:.06em; }
+
+/* CALL-OUT BOXES */
+.callout { padding:20px 24px; border-radius:5px; margin:24px 0; }
+.callout-warn { background:rgba(232,160,32,.08); border-left:3px solid #e8a020; }
+.callout-info { background:rgba(37,99,174,.07); border-left:3px solid #2563ae; }
+.callout-tip { background:rgba(76,175,130,.08); border-left:3px solid #4caf82; }
+.callout-title { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; font-weight:600; margin-bottom:8px; }
+.callout-warn .callout-title { color:#b07010; }
+.callout-info .callout-title { color:#1a5ca8; }
+.callout-tip .callout-title { color:#2d7a5c; }
+.callout p { font-size:.82rem; color:var(--mid); line-height:1.7; margin:0; }
+
+/* COMPARISON TABLE */
+.guide-table { width:100%; border-collapse:collapse; margin:24px 0; font-size:.8rem; }
+.guide-table th { background:var(--iron); color:rgba(255,255,255,.7); padding:10px 14px; text-align:left; font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; font-weight:600; }
+.guide-table td { padding:10px 14px; border-bottom:1px solid rgba(0,0,0,.06); color:var(--mid); vertical-align:top; }
+.guide-table tr:last-child td { border-bottom:none; }
+.guide-table tr:nth-child(even) td { background:rgba(0,0,0,.02); }
+.guide-table td strong { color:var(--iron); }
+.wind-dot-inline { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px; vertical-align:middle; }
+
+/* TOC */
+.guide-toc { background:var(--sand); border:1px solid rgba(0,0,0,.07); border-radius:5px; padding:22px 26px; margin-bottom:40px; }
+.guide-toc-title { font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); margin-bottom:12px; font-weight:600; }
+.guide-toc a { display:block; font-size:.82rem; color:var(--clay); padding:4px 0; text-decoration:none; border-bottom:1px solid rgba(0,0,0,.05); }
+.guide-toc a:last-child { border-bottom:none; }
+.guide-toc a:hover { color:var(--clay2); }
+
+/* BOTTOM CTA */
+.guide-cta { background:var(--iron); padding:60px 5vw; text-align:center; }
+.guide-cta h2 { font-family:'Cormorant Garamond',serif; font-size:1.9rem; font-weight:700; color:white; margin-bottom:12px; }
+.guide-cta p { font-size:.88rem; color:rgba(255,255,255,.45); max-width:440px; margin:0 auto 28px; line-height:1.7; }
+.guide-cta-btns { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.btn-clay { display:inline-block; padding:13px 28px; background:var(--clay); color:white; border-radius:3px; font-size:.84rem; font-weight:600; transition:background .15s; }
+.btn-clay:hover { background:var(--clay2); }
+.btn-outline-w { display:inline-block; padding:13px 28px; border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6); border-radius:3px; font-size:.84rem; transition:all .15s; }
+.btn-outline-w:hover { border-color:rgba(255,255,255,.5); color:white; }
+
+@media(max-width:640px) { .rating-cards { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header id="site-nav"></header>
+
+<!-- HERO -->
+<section class="guide-hero">
+  <div class="guide-hero-inner">
+    <div class="eyebrow" style="color:var(--clay);margin-bottom:14px">🌬️ Our Exclusive Resource</div>
+    <h1>The wind rating guide<br><em>Phoenix actually needed.</em></h1>
+    <p>Manufacturer specs are tested in controlled conditions. Phoenix monsoon season is not a controlled condition. This guide is built from what we've seen hold up — and what we've seen fail — across 500+ real installs.</p>
+    <div class="guide-meta">
+      <span class="guide-meta-item"><strong>500+</strong> installs referenced</span>
+      <span class="guide-meta-item"><strong>9</strong> structure categories covered</span>
+      <span class="guide-meta-item"><strong>Arizona statewide</strong></span>
+      <span class="guide-meta-item">Updated <strong>2026</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE CONTENT -->
+<div style="background:white">
+<div class="guide-body">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="guide-toc">
+    <div class="guide-toc-title">In this guide</div>
+    <a href="#what-is-wind-rating">What is a wind rating — and why it matters in Phoenix</a>
+    <a href="#four-tiers">The four wind rating tiers</a>
+    <a href="#by-category">Wind ratings by structure category</a>
+    <a href="#anchoring">How anchoring changes everything</a>
+    <a href="#red-flags">Red flags to watch for</a>
+    <a href="#recommendations">Our recommendations by use case</a>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 id="what-is-wind-rating">What is a wind rating — and why it matters in Phoenix</h2>
+  <p>A wind rating is the maximum sustained wind speed a structure can withstand when properly installed and anchored. Manufacturers test their structures in controlled environments and publish these ratings — but there's a significant gap between a lab test and a Phoenix haboob.</p>
+  <p>Phoenix's monsoon season runs <strong>June through September</strong>. During that window, the metro routinely sees sustained winds of 40–60 mph with gusts that can exceed 80 mph. In the worst storms — the kind that make national news — we've clocked gusts over 100 mph.</p>
+
+  <div class="callout callout-warn">
+    <div class="callout-title">⚠️ Why manufacturer ratings alone aren't enough</div>
+    <p>A structure rated at 60 mph doesn't automatically survive a 60 mph gust. That rating assumes proper anchoring to a rated surface, correct assembly, and no pre-existing damage. We've seen 60 mph rated structures fail at 45 mph because they were surface-mounted on pavers without anchoring.</p>
+  </div>
+
+  <p>After 500+ installs across Arizona, we've developed our own wind rating system that accounts for <strong>real-world Phoenix conditions</strong> — not lab conditions. That's what every product on our comparison is rated against.</p>
+
+  <!-- SECTION 2 -->
+  <h2 id="four-tiers">The four wind rating tiers</h2>
+  <p>We organize every structure into one of four tiers based on how it performs in Phoenix monsoon conditions — not just what the manufacturer claims.</p>
+
+  <div class="rating-cards">
+    <div class="rating-card">
+      <div class="rating-card-head" style="background:#e05555">
+        <div class="rating-mph">Under 60 mph</div>
+        <h3>Light Duty</h3>
+      </div>
+      <div class="rating-card-body">
+        <span class="rating-tag" style="background:#fde8e8;color:#c0392b">🔴 Seasonal / Temporary</span>
+        <p>These structures are designed for light-weather climates. In Phoenix, we classify them as seasonal or temporary — suitable for occasional use with the understanding they may not survive a significant monsoon event.</p>
+        <p><strong>Our recommendation:</strong> Not ideal for Phoenix year-round installation. If you purchase one, enhanced anchoring is essential and you should plan to secure or remove during storm warnings.</p>
+      </div>
+    </div>
+    <div class="rating-card">
+      <div class="rating-card-head" style="background:#e8a020">
+        <div class="rating-mph">60–79 mph</div>
+        <h3>Moderate</h3>
+      </div>
+      <div class="rating-card-body">
+        <span class="rating-tag" style="background:#fef3e2;color:#b07010">🟡 Suitable with Proper Anchoring</span>
+        <p>Most Phoenix monsoon events fall in this range. A 60–79 mph rated structure with proper masonry or stake anchoring will handle the majority of storms you'll see in a typical monsoon season.</p>
+        <p><strong>Our recommendation:</strong> Acceptable for Phoenix with masonry anchoring on concrete or pavers. Not recommended for soft surfaces without concrete footers.</p>
+      </div>
+    </div>
+    <div class="rating-card">
+      <div class="rating-card-head" style="background:#4a9e6b">
+        <div class="rating-mph">80–99 mph</div>
+        <h3>Heavy Duty</h3>
+      </div>
+      <div class="rating-card-body">
+        <span class="rating-tag" style="background:#e8f5ee;color:#2d7a4f">🟢 Recommended for Phoenix</span>
+        <p>This is our primary recommendation range for Phoenix homeowners. These structures handle all but the most severe monsoon events and are engineered with reinforced frames and connection points.</p>
+        <p><strong>Our recommendation:</strong> Our most-installed category. Combine with masonry anchoring for reliable year-round performance in Phoenix conditions.</p>
+      </div>
+    </div>
+    <div class="rating-card">
+      <div class="rating-card-head" style="background:#2563ae">
+        <div class="rating-mph">100 mph+</div>
+        <h3>Pro-Rated</h3>
+      </div>
+      <div class="rating-card-body">
+        <span class="rating-tag" style="background:#e8eef8;color:#1a4a8a">🔵 Maximum Protection</span>
+        <p>Pro-rated structures from Backyard Discovery are engineered and third-party tested for extreme wind conditions. They represent the most rigorous wind performance standard in the consumer outdoor structure market.</p>
+        <p><strong>Our recommendation:</strong> Best option for exposed locations, larger lots, elevated properties, or anyone who wants maximum peace of mind through monsoon season.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2 id="by-category">Wind ratings by structure category</h2>
+  <p>Different structure types perform very differently in wind — not because of build quality, but because of fundamental design differences. Here's what to expect from each category.</p>
+
+  <h3>Wood Gazebos</h3>
+  <p>Cedar-framed gazebos with solid steel or aluminum roofs. Wind rating depends heavily on the roof system. <strong>Backyard Discovery's 100 mph certified line</strong> reaches 100 mph. Yardistry aluminum-roof models typically rate at 65 mph. Most Sunjoy cedar frame models rate around 50 mph.</p>
+  <p>The solid roof is a double-edged sword in high wind — it creates uplift force that a pergola with open slats doesn't. Anchoring is critical on all wood gazebos.</p>
+
+  <h3>Metal Gazebos</h3>
+  <p>Aluminum and galvanized steel hardtop gazebos. Range varies widely — from 25 mph soft-top models to 100 mph Range by Backyard Discovery Lancaster gazebos. The most common brands (Purple Leaf, Kozyard, Domi) rate at 60 mph. Gazebo Penguin reaches 85 mph.</p>
+
+  <div class="callout callout-info">
+    <div class="callout-title">ℹ️ Soft-top vs hardtop</div>
+    <p>Soft-top gazebos (like the StarEcho) have fabric canopies rated at 25 mph or less. They are not suitable for Phoenix monsoon season without removing the canopy before storms. We recommend hardtop structures for any permanent installation in Arizona.</p>
+  </div>
+
+  <h3>Wood Pergolas</h3>
+  <p>Open slatted or trellis-roof cedar pergolas. Counter-intuitively, these often rate higher than enclosed-roof structures — wind passes through the open slats rather than catching the roof as a sail. Veikous cedar pergolas reach 80 mph. Backyard Discovery cedar pergolas reach 100 mph.</p>
+
+  <h3>Metal Pergolas</h3>
+  <p>Open-frame aluminum pergolas without louvers. The Range by Backyard Discovery Stratford line is 100 mph wind rated. Open frame design handles wind exceptionally well.</p>
+
+  <h3>Louvered Pergolas</h3>
+  <p>The most wind-rating-diverse category. Pergolux Series 4 reaches 165 mph — the highest rating in our entire comparison. Backyard Discovery louvered pergolas hit 100 mph. Standard louvered brands (Mirador, Purple Leaf, Domi) rate at 70–75 mph. Budget louvered options like Nordivale rate at 35 mph.</p>
+  <p><strong>Critical note on louvered pergolas:</strong> Close the louvers when monsoon storms approach. Open louvers in high wind can create extreme stress on the louver blades and mounting points. All quality louvered pergola systems include storm drainage channels for when they're closed during rain.</p>
+
+  <div class="callout callout-tip">
+    <div class="callout-title">✅ Pro tip — louvered pergolas in Phoenix</div>
+    <p>A louvered pergola is the most versatile choice for Phoenix specifically. Open for airflow in summer heat, close for shade from afternoon sun, close during monsoon to protect both the structure and whatever's beneath it. The drainage channels handle runoff. It's the only outdoor structure designed to actively respond to weather rather than just survive it.</p>
+  </div>
+
+  <h3>Grill & Bar Gazebos</h3>
+  <p>Typically rate at 50 mph. Open sides help with wind resistance — the structure doesn't catch wind the way a closed-wall gazebo does. Proper anchoring is still essential.</p>
+
+  <h3>Sloped Roof / Lean-To</h3>
+  <p>Wall-mounted lean-to structures gain significant stability from building attachment. Freestanding lean-to models (Aecojoy) rate at 80 mph. Backyard Discovery carport-style structures reach 100 mph. The single-pitch roof sheds wind better than a traditional hip or gable roof in most wind directions.</p>
+
+  <h3>Polycarbonate & Composite</h3>
+  <p>Polycarbonate panels transmit light while handling rain and UV. Wind ratings are modest — Canopia Roma reaches 75 mph, most others fall in the 50–56 mph range. The panels flex slightly under load rather than cracking, which is actually an advantage in moderate wind events.</p>
+
+  <!-- SECTION 4 -->
+  <h2 id="anchoring">How anchoring changes everything</h2>
+  <p>The wind rating on any structure assumes proper anchoring. A 100 mph rated structure improperly anchored can fail at 40 mph. A 60 mph rated structure correctly anchored to solid concrete can survive well beyond its rating.</p>
+
+  <table class="guide-table">
+    <thead>
+      <tr>
+        <th>Anchor Type</th>
+        <th>Best For</th>
+        <th>Our Price</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Steel Ground Stakes</strong></td>
+        <td>Dirt, turf, gravel, decomposed granite</td>
+        <td>$20/leg</td>
+        <td>Most common in Phoenix. Fast install, fully removable. Best combined with a concrete base cap.</td>
+      </tr>
+      <tr>
+        <td><strong>Masonry Anchoring</strong></td>
+        <td>Existing concrete slabs, paver patios</td>
+        <td>$30/leg</td>
+        <td>Permanent. Drill-and-anchor into existing hardscape. Most installations across Arizona use this method.</td>
+      </tr>
+      <tr>
+        <td><strong>Concrete Footers</strong></td>
+        <td>New installations, soft soil, maximum stability</td>
+        <td>$300/leg</td>
+        <td>Pour-in-place footers for permanent installation. Required for some HOAs and all commercial applications.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warn">
+    <div class="callout-title">⚠️ Anchoring policy</div>
+    <p>We offer anchoring as an add-on to any new installation. We do not anchor previously assembled structures or structures assembled by another company. Anchoring requires knowledge of what's beneath the surface — we assess this remotely before every install using your photos.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 id="red-flags">Red flags to watch for when buying</h2>
+  <ul>
+    <li><strong>No wind rating listed</strong> — If a manufacturer doesn't publish a wind rating, assume it's under 40 mph. Reputable manufacturers test and publish. This is a non-negotiable spec for Phoenix.</li>
+    <li><strong>"When properly anchored" without specifics</strong> — Every wind rating assumes anchoring, but if the manufacturer doesn't specify what anchoring is required, the rating is essentially meaningless.</li>
+    <li><strong>Soft-top or fabric roof</strong> — Not suitable for permanent installation in Phoenix without a plan to remove the canopy before every storm.</li>
+    <li><strong>Very low price on a large structure</strong> — A 12×16 gazebo under $500 will have compromised frame gauge, connection hardware, and almost certainly a low or unpublished wind rating.</li>
+    <li><strong>No assembly instructions available</strong> — If the manufacturer doesn't provide detailed assembly documentation, proper installation is impossible and the wind rating is void.</li>
+  </ul>
+
+  <!-- SECTION 6 -->
+  <h2 id="recommendations">Our recommendations by use case</h2>
+
+  <h3>Best for maximum monsoon protection</h3>
+  <p><strong>Backyard Discovery 100 mph certified line</strong> — engineered and third-party tested for severe weather markets. As an authorized BD dealer, we carry and install the full line. The Barrington, Arcadia, Arlington, and Norwood gazebos and the louvered pergola are the most-requested structures in our install queue.</p>
+
+  <h3>Best value for Phoenix year-round use</h3>
+  <p><strong>Gazebo Penguin Venus or Florence</strong> — 85 mph rating, engineered specifically for four-season climates. A step below the 100 mph BD line but significantly above the 60 mph mainstream market.</p>
+
+  <h3>Most versatile for Phoenix weather</h3>
+  <p><strong>Any louvered pergola rated 70 mph+</strong> — The ability to close louvers before a storm, manage drainage, and reopen for airflow makes this the most Phoenix-adapted structure type in our catalog. Mirador and Purple Leaf offer strong options at moderate prices.</p>
+
+  <h3>Best budget option that survives Phoenix</h3>
+  <p><strong>Gazebest hardtop gazebo</strong> — 40 mph rated but at a price point that allows for full concrete footer anchoring, which pushes real-world performance well beyond the stated rating. Strong aluminum frame for the price.</p>
+
+  <div style="margin-top:40px;padding:24px;background:var(--sand);border-radius:5px;border:1px solid rgba(0,0,0,.07)">
+    <div style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:10px">Questions about your specific situation?</div>
+    <p style="font-size:.84rem;color:var(--mid);line-height:1.7;margin-bottom:16px">Every patio is different — surface type, HOA restrictions, exposure, and how the wind channels around your home all matter. Browse our full comparison or reach out directly and we'll point you in the right direction.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="structures.html" style="display:inline-block;padding:11px 22px;background:var(--clay);color:white;border-radius:3px;font-size:.8rem;font-weight:600;transition:background .15s" onmouseover="this.style.background='var(--clay2)'" onmouseout="this.style.background='var(--clay)'">Browse All Structures →</a>
+      <a href="book.html" style="display:inline-block;padding:11px 22px;border:1px solid rgba(0,0,0,.15);color:var(--mid);border-radius:3px;font-size:.8rem;transition:all .15s" onmouseover="this.style.borderColor='var(--clay)';this.style.color='var(--clay)'" onmouseout="this.style.borderColor='rgba(0,0,0,.15)';this.style.color='var(--mid)'">Book an Install</a>
+    </div>
+  </div>
+
+</div><!-- end guide-body -->
+</div><!-- end white bg -->
+
+<!-- BOTTOM CTA -->
+<section class="guide-cta">
+  <div class="eyebrow" style="color:var(--clay);margin-bottom:12px">Ready to find your structure?</div>
+  <h2>Every product rated for Phoenix.</h2>
+  <p>Browse 85+ structures across 9 categories — all wind-rated using the system in this guide. Prices verified and updated regularly.</p>
+  <div class="guide-cta-btns">
+    <a href="structures.html" class="btn-clay">Compare Structures →</a>
+    <a href="anchoring.html" class="btn-outline-w">Anchoring Services</a>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<div id="purchase-modal" onclick="if(event.target===this)closeModal()"><div class="modal-box" id="modal-content"></div></div>
+<script>
+/* ─────────────────────────────────────────────
+   Sonoran Structures — Shared Product Database
+   Used by all category pages + structures.html
+   Update prices here and every page reflects it
+   ───────────────────────────────────────────── */
+
+const AZ_TAX = 0.083;
+
+/* ── SQUARE PAYMENT LINKS ──
+   Paste your Square payment link URLs below once created.
+   squareup.com/dashboard → Online → Payment Links → Create  */
+const PAYMENT_LINKS = {
+  buy:       "https://square.link/u/ntRIZB09",            // Purchase & Install
+  assembly:  "https://square.link/u/ntRIZB09",            // Assembly Only (same link until separate one created)
+  anchoring: "https://square.link/u/ntRIZB09",            // Anchoring Add-On (same link until separate one created)
+};
+
+/* ── LIVE PRICE LOADER ──
+   Fetches prices.json (written nightly by price_fetcher.py)
+   and overlays live Amazon/Walmart prices onto product cards.
+   Falls back to hardcoded prices if file not available.        */
+async function loadLivePrices() {
+  try {
+    const resp = await fetch('prices.json?v=' + Date.now(), { cache: 'no-store' });
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    if (!data || !data.prices) return null;
+
+    // Build lookup map: product_id → live prices
+    const liveMap = {};
+    for (const item of data.prices) {
+      liveMap[item.product_id] = item;
+    }
+
+    // Overlay live prices onto the global PRODUCTS array
+    let updated = 0;
+    for (const product of PRODUCTS) {
+      const live = liveMap[product.id];
+      if (!live) continue;
+
+      // Inject Amazon live price
+      if (live.amazon_price && live.amazon_url) {
+        const existing = product.prices.find(p => p.r === "Amazon");
+        if (existing) {
+          existing.p = live.amazon_formatted;
+          existing.v = live.amazon_price;
+          existing.url = live.amazon_url;
+          existing.live = true;
+        } else {
+          product.prices.unshift({ r: "Amazon", p: live.amazon_formatted, v: live.amazon_price, url: live.amazon_url, live: true });
+        }
+      }
+
+      // Inject Walmart live price
+      if (live.walmart_price && live.walmart_url) {
+        const existing = product.prices.find(p => p.r === "Walmart");
+        if (existing) {
+          existing.p = live.walmart_formatted;
+          existing.v = live.walmart_price;
+          existing.url = live.walmart_url;
+          existing.live = true;
+        } else {
+          product.prices.push({ r: "Walmart", p: live.walmart_formatted, v: live.walmart_price, url: live.walmart_url, live: true });
+        }
+      }
+      updated++;
+    }
+
+    console.log(`[Sonoran] Live prices loaded: ${updated} products updated, last updated ${data.last_updated_display || data.last_updated}`);
+
+    // Show last-updated badge if element exists
+    const badge = document.getElementById('price-update-badge');
+    if (badge && data.last_updated_display) {
+      badge.textContent = `Prices last verified ${data.last_updated_display}`;
+      badge.style.display = 'inline';
+    }
+
+    return data;
+  } catch (e) {
+    console.log('[Sonoran] prices.json not available — using built-in prices');
+    return null;
+  }
+}
+
+
+
+/* ── CATEGORY DEFINITIONS ── */
+const CATEGORIES = [
+  { type:"woodgazebo",   slug:"wood-gazebos",       label:"Wood Gazebos",        num:"01", emoji:"🌲", color:"#7a5e38", desc:"Cedar-framed gazebos with solid steel or aluminum roofs. Warmest aesthetic, most popular in Phoenix." },
+  { type:"metalgazebo",  slug:"metal-gazebos",       label:"Metal Gazebos",       num:"02", emoji:"🏗️", color:"#3A5A6B", desc:"Aluminum and galvanized steel hardtop gazebos. Zero maintenance, widest size range, most brands." },
+  { type:"woodpergola",  slug:"wood-pergolas",        label:"Wood Pergolas",       num:"03", emoji:"🌳", color:"#5C4A28", desc:"Open slatted or trellis-roof cedar pergolas. Wind passes through — strong ratings at budget prices." },
+  { type:"metalpergola", slug:"metal-pergolas",       label:"Metal Pergolas",      num:"04", emoji:"🔩", color:"#2A4A5B", desc:"Open-frame aluminum pergolas. Clean architectural lines, sleek modern profile, 100 mph rated." },
+  { type:"louvered",     slug:"louvered-pergolas",    label:"Louvered Pergolas",   num:"05", emoji:"☀️", color:"#5C8B5A", desc:"Adjustable aluminum louvers with integrated gutters. Most versatile structure for monsoon season." },
+  { type:"grill",        slug:"grill-gazebos",        label:"Grill Gazebos",       num:"06", emoji:"🔥", color:"#B84A0A", desc:"Fire-safe steel roofs, open sides for airflow, built-in prep shelves. Designed to go over your grill." },
+  { type:"bar",          slug:"bar-gazebos",          label:"Bar Gazebos",         num:"07", emoji:"🍹", color:"#2A7A8C", desc:"Entertainment pavilions with integrated bar counters and cord management — built for hosting." },
+  { type:"slopedRoof",   slug:"sloped-roof",          label:"Sloped Roof / Lean-To",num:"08",emoji:"📐", color:"#6B5A8B", desc:"Wall-mounted or freestanding lean-to structures. Single-pitch sloped roof maximizes patio space." },
+  { type:"composite",    slug:"polycarbonate",        label:"Polycarbonate",       num:"09", emoji:"💡", color:"#5A6FAD", desc:"Polycarbonate panels filter light while blocking UV. A fundamentally different experience from steel." },
+];
+
+/* ── WIND HELPERS ── */
+const windColor = w => w>=100?"#2563ae":w>=80?"#4a9e6b":w>=60?"#e8a020":"#e05555";
+const windLabel = w => w>=100?"100+ mph · Pro-Rated":w>=80?"80–99 mph · Heavy Duty":w>=60?"60–79 mph · Moderate":"Under 60 mph";
+const catColor  = t => (CATEGORIES.find(c=>c.type===t)||{color:"#555"}).color;
+
+/* ── PRODUCT DATABASE ── */
+
+const PRODUCTS = [
+  // ── WOOD GAZEBOS ──
+  {id:1,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Barrington Cedar Gazebo",          size:"16×12 ft", isBD:true,  sonoranRate:850,
+   assemblyComps:[{n:"BD Official",r:1080},{n:"HandyBuddy",r:895.95},{n:"Go Configure",r:781.25,note:"≤15ft only"}],
+   prices:[{r:"Sam's Club",p:"~$2,799",v:2799,best:true},{r:"Home Depot",p:"~$3,609",v:3609},{r:"Direct",p:"~$3,799",v:3799}]},
+  {id:2,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Barrington Cedar Gazebo",          size:"14×12 ft", isBD:true,  sonoranRate:775,
+   assemblyComps:[{n:"BD Official",r:960},{n:"HandyBuddy",r:895.95},{n:"Go Configure",r:781.25,note:"≤15ft only"}],
+   prices:[{r:"Direct",p:"From $3,299",v:3299,best:true},{r:"Home Depot",p:"~$3,499",v:3499}]},
+  {id:3,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Barrington Cedar Gazebo",          size:"14×10 ft", isBD:true,  sonoranRate:775,
+   assemblyComps:[{n:"BD Official",r:910},{n:"HandyBuddy",r:895.95},{n:"Go Configure",r:781.25,note:"≤15ft only"}],
+   prices:[{r:"Direct",p:"From $2,799",v:2799,best:true},{r:"Lowe's",p:"~$2,999",v:2999}]},
+  {id:4,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Arcadia Cedar Gazebo",             size:"12×9.5 ft",isBD:true,  sonoranRate:775,
+   assemblyComps:[{n:"HandyBuddy",r:785.95},{n:"Go Configure",r:781.25,note:"≤15ft only"}],
+   prices:[{r:"Sam's Club",p:"~$1,999",v:1999,best:true},{r:"Home Depot",p:"~$2,499",v:2499}]},
+  {id:5,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Arlington Cedar Gazebo",           size:"12×10 ft", isBD:true,  sonoranRate:775,
+   assemblyComps:[{n:"HandyBuddy",r:785.95},{n:"Go Configure",r:781.25,note:"≤15ft only"}],
+   prices:[{r:"Direct",p:"From $2,499",v:2499,best:true},{r:"Home Depot",p:"~$2,599",v:2599}]},
+  {id:6,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Norwood Cedar + Steel Gazebo",     size:"16×12 ft", isBD:true,  sonoranRate:850,
+   assemblyComps:[{n:"BD Official",r:1080},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"From $3,799",v:3799,best:true}]},
+  {id:7,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Barrington Cedar Carport/Gazebo",  size:"20×12 ft", isBD:true,  sonoranRate:1200,
+   assemblyComps:[{n:"BD Official",r:1460},{n:"HandyBuddy (est.)",r:1099}],
+   prices:[{r:"Direct",p:"From $4,499",v:4499,best:true}]},
+  {id:8,  type:"woodgazebo",  wind:100,brand:"Backyard Discovery",name:"Norwood Cedar Carport/Gazebo",     size:"24×12 ft", isBD:true,  sonoranRate:1500,
+   assemblyComps:[{n:"BD Official",r:1650},{n:"HandyBuddy (est.)",r:1099}],
+   prices:[{r:"Direct",p:"From $5,299",v:5299,best:true}]},
+  {id:9,  type:"woodgazebo",  wind:100,brand:"Range by Backyard Discovery",name:"Lodge Cedar + Steel Gazebo",size:"14×14 ft",isBD:true, sonoranRate:775,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:895.95}],
+   prices:[{r:"Direct",p:"$4,499",v:4499,best:true}]},
+  {id:10, type:"woodgazebo",  wind:100,brand:"Range by Backyard Discovery",name:"Lodge Cedar + Steel Gazebo",size:"19×14 ft",isBD:true, sonoranRate:1200,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099}],
+   prices:[{r:"Direct",p:"$5,499",v:5499,best:true}]},
+  {id:11, type:"woodgazebo",  wind:65, brand:"Yardistry",            name:"Meridian Gazebo — Aluminum Roof",size:"12×14 ft", isBD:false, sonoranRate:775,
+   assemblyComps:[{n:"HandyBuddy (confirmed)",r:965.95},{n:"Go Configure",r:781.25,note:"≤15ft only"}],
+   prices:[{r:"Costco",p:"~$2,499",v:2499,best:true},{r:"Lowe's",p:"~$2,699",v:2699},{r:"Direct",p:"$2,999",v:2999}]},
+  {id:12, type:"woodgazebo",  wind:65, brand:"Yardistry",            name:"Meridian Gazebo — Aluminum Roof",size:"12×16 ft", isBD:false, sonoranRate:1100,
+   assemblyComps:[{n:"HandyBuddy (confirmed)",r:1285.95}],
+   prices:[{r:"Costco",p:"~$2,799",v:2799,best:true},{r:"Lowe's",p:"~$2,999",v:2999},{r:"Direct",p:"$3,359",v:3359}]},
+  {id:13, type:"woodgazebo",  wind:65, brand:"Yardistry",            name:"Meridian Gazebo — Aluminum Roof",size:"12×20 ft", isBD:false, sonoranRate:1200,
+   assemblyComps:[{n:"HandyBuddy (confirmed)",r:1485.95}],
+   prices:[{r:"Costco",p:"~$3,699",v:3699,best:true},{r:"Lowe's",p:"~$3,899",v:3899},{r:"Direct",p:"$4,199",v:4199}]},
+  {id:14, type:"woodgazebo",  wind:65, brand:"Yardistry",            name:"Meridian Gazebo — Aluminum Roof",size:"12×24 ft", isBD:false, sonoranRate:1500,
+   assemblyComps:[{n:"HandyBuddy (confirmed)",r:1785.95}],
+   prices:[{r:"Costco",p:"TBD",v:0,best:true},{r:"Direct",p:"~$4,499",v:4499}]},
+  {id:15, type:"woodgazebo",  wind:50, brand:"Sunjoy",               name:"Cedar Frame Steel Hardtop",      size:"12×10 ft", isBD:false, sonoranRate:775,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Lowe's",p:"~$943",v:943,best:true},{r:"Home Depot",p:"$943",v:943},{r:"Direct (sunjoyshop.com)",p:"~$943",v:943,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+
+  // ── METAL GAZEBOS ──
+  {id:20, type:"metalgazebo", wind:100,brand:"Range by Backyard Discovery",name:"Lancaster Steel Gazebo",  size:"14×14 ft", isBD:true,  sonoranRate:750,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:895.95}],
+   prices:[{r:"Direct",p:"$4,999",v:4999,best:true}]},
+  {id:21, type:"metalgazebo", wind:100,brand:"Range by Backyard Discovery",name:"Lancaster Steel Gazebo",  size:"16×14 ft", isBD:true,  sonoranRate:850,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099}],
+   prices:[{r:"Direct",p:"$5,499",v:5499,best:true}]},
+  {id:22, type:"metalgazebo", wind:100,brand:"Range by Backyard Discovery",name:"Lancaster Steel Gazebo",  size:"18×14 ft", isBD:true,  sonoranRate:850,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099}],
+   prices:[{r:"Direct",p:"$5,999",v:5999,best:true}]},
+  {id:23, type:"metalgazebo", wind:85, brand:"Gazebo Penguin",        name:"Venus Hardtop Gazebo",         size:"10×10 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$2,719",v:2719,best:true},{r:"Direct",p:"~$2,899",v:2899}]},
+  {id:24, type:"metalgazebo", wind:60, brand:"Purple Leaf",           name:"Hardtop Aluminum Gazebo",      size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$1,079",v:1079,best:true},{r:"Amazon",p:"~$1,199",v:1199},{r:"Lowe's",p:"~$1,199",v:1199}]},
+  {id:25, type:"metalgazebo", wind:60, brand:"Purple Leaf",           name:"Hardtop Aluminum Gazebo",      size:"12×14 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$1,199",v:1199,best:true},{r:"Amazon",p:"~$1,249",v:1249}]},
+  {id:26, type:"metalgazebo", wind:60, brand:"Purple Leaf",           name:"Hardtop Aluminum Gazebo",      size:"12×16 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 16ft+"}],
+   prices:[{r:"Walmart",p:"~$1,403",v:1403,best:true},{r:"Amazon",p:"~$1,499",v:1499}]},
+  {id:27, type:"metalgazebo", wind:60, brand:"Purple Leaf",           name:"Hardtop Aluminum Gazebo",      size:"12×20 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Walmart",p:"~$1,999",v:1999,best:true},{r:"Amazon",p:"~$2,099",v:2099}]},
+  {id:28, type:"metalgazebo", wind:60, brand:"Domi Outdoor Living",   name:"Hardtop Gazebo w/ Gutter",     size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$999",v:999,best:true},{r:"Amazon",p:"~$1,049",v:1049}]},
+  {id:29, type:"metalgazebo", wind:60, brand:"Domi Outdoor Living",   name:"Hardtop Gazebo w/ Gutter",     size:"12×14 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$1,099",v:1099,best:true},{r:"Amazon",p:"~$1,199",v:1199}]},
+  {id:30, type:"metalgazebo", wind:60, brand:"Kozyard",               name:"Alexander Hardtop Gazebo",     size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$1,198",v:1198,best:true},{r:"Walmart",p:"$1,198",v:1198}]},
+  {id:31, type:"metalgazebo", wind:60, brand:"Kozyard",               name:"Alexander Hardtop Gazebo",     size:"12×16 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 16ft+"}],
+   prices:[{r:"Home Depot",p:"$1,841",v:1841,best:true},{r:"Walmart",p:"~$1,841",v:1841}]},
+  {id:32, type:"metalgazebo", wind:60, brand:"Kozyard",               name:"Alexander Hardtop Gazebo",     size:"12×20 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Walmart",p:"$1,942",v:1942,best:true},{r:"Direct",p:"$2,310",v:2310}]},
+  {id:33, type:"metalgazebo", wind:50, brand:"ShelterLogic / Sojag",  name:"Genova Hardtop Gazebo",        size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$1,799",v:1799,best:true},{r:"Home Depot",p:"~$1,899",v:1899}]},
+  {id:34, type:"metalgazebo", wind:50, brand:"ShelterLogic / Sojag",  name:"Genova Hardtop Gazebo",        size:"12×16 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 16ft+"}],
+   prices:[{r:"Walmart",p:"$2,099",v:2099,best:true},{r:"Direct",p:"~$2,399",v:2399}]},
+  {id:35, type:"metalgazebo", wind:50, brand:"ShelterLogic / Sojag",  name:"Mykonos II Double Roof Gazebo",size:"12×16 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 16ft+"}],
+   prices:[{r:"Walmart",p:"$1,557",v:1557,best:true},{r:"Direct",p:"~$1,699",v:1699}]},
+  {id:36, type:"metalgazebo", wind:40, brand:"Gazebest",              name:"Hardtop Gazebo",               size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$449",v:449,best:true},{r:"Amazon",p:"~$499",v:499}]},
+  {id:37, type:"metalgazebo", wind:40, brand:"Gazebest",              name:"Hardtop Gazebo",               size:"12×16 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 16ft+"}],
+   prices:[{r:"Direct",p:"$699",v:699,best:true},{r:"Amazon",p:"~$749",v:749}]},
+  {id:38, type:"metalgazebo", wind:40, brand:"Gazebest",              name:"Hardtop Gazebo",               size:"12×20 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Direct",p:"$899",v:899,best:true},{r:"Amazon",p:"~$949",v:949}]},
+  {id:39, type:"metalgazebo", wind:25, brand:"StarEcho",              name:"Soft-Top Steel Gazebo ⚠️",    size:"10×13 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Amazon",p:"~$259",v:259,best:true},{r:"Wayfair",p:"~$269",v:269}]},
+
+  // ── WOOD PERGOLAS ──
+  {id:50, type:"woodpergola", wind:100,brand:"Backyard Discovery",    name:"Beaumont Cedar Pergola",        size:"16×12 ft", isBD:true,  sonoranRate:750,
+   assemblyComps:[{n:"BD Official",r:670},{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"From $2,199",v:2199,best:true},{r:"Lowe's",p:"~$2,299",v:2299}]},
+  {id:51, type:"woodpergola", wind:100,brand:"Backyard Discovery",    name:"Cedar Pergola w/ PowerPort",   size:"14×10 ft", isBD:true,  sonoranRate:750,
+   assemblyComps:[{n:"BD Official",r:670},{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Sam's Club",p:"From $1,299",v:1299,best:true},{r:"Direct",p:"From $1,499",v:1499}]},
+  {id:52, type:"woodpergola", wind:80, brand:"Veikous",               name:"Cedar Wood Pergola (Open Trellis)",size:"10×12 ft",isBD:false,sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$700",v:700,best:true},{r:"Lowe's",p:"~$799",v:799}]},
+  {id:53, type:"woodpergola", wind:80, brand:"Veikous",               name:"Cedar Wood Pergola (Open Trellis)",size:"12×14 ft",isBD:false,sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$700",v:700,best:true},{r:"Lowe's",p:"~$1,100",v:1100}]},
+
+  // ── METAL PERGOLAS ──
+  {id:60, type:"metalpergola",wind:100,brand:"Range by Backyard Discovery",name:"Stratford Steel Pergola", size:"12×10 ft", isBD:true,  sonoranRate:700,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$2,299",v:2299,best:true}]},
+  {id:61, type:"metalpergola",wind:100,brand:"Range by Backyard Discovery",name:"Stratford Steel Pergola", size:"14×10 ft", isBD:true,  sonoranRate:700,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$2,499",v:2499,best:true}]},
+  {id:62, type:"metalpergola",wind:100,brand:"Range by Backyard Discovery",name:"Stratford Steel Pergola", size:"14×12 ft", isBD:true,  sonoranRate:700,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$2,799",v:2799,best:true}]},
+  {id:63, type:"metalpergola",wind:100,brand:"Range by Backyard Discovery",name:"Stratford Steel Pergola", size:"16×12 ft", isBD:true,  sonoranRate:700,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$2,999",v:2999,best:true}]},
+
+  // ── LOUVERED PERGOLAS ──
+  {id:70, type:"louvered",    wind:165,brand:"Pergolux",              name:"Series 4 Louvered Pergola",    size:"Custom",   isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750}],
+   prices:[{r:"Direct",p:"From $4,732",v:4732,best:true}]},
+  {id:71, type:"louvered",    wind:100,brand:"Backyard Discovery",    name:"Louvered Steel Pergola w/ PowerPort",size:"14×10 ft",isBD:true,sonoranRate:650,
+   assemblyComps:[{n:"BD Official",r:670},{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Sam's Club",p:"$1,499",v:1499,best:true},{r:"Lowe's",p:"~$1,599",v:1599}]},
+  {id:72, type:"louvered",    wind:100,brand:"Backyard Discovery",    name:"Louvered Steel Pergola w/ PowerPort",size:"14×12 ft",isBD:true,sonoranRate:650,
+   assemblyComps:[{n:"BD Official",r:670},{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Sam's Club",p:"$1,799",v:1799,best:true},{r:"Lowe's",p:"~$1,899",v:1899}]},
+  {id:73, type:"louvered",    wind:75, brand:"Mirador",               name:"Adjustable Louvered Pergola",  size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Costco",p:"$1,899",v:1899,best:true},{r:"Lowe's",p:"~$1,999",v:1999}]},
+  {id:74, type:"louvered",    wind:75, brand:"Mirador",               name:"Louvered Pergola",             size:"10×13 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Costco",p:"$1,999",v:1999,best:true},{r:"Lowe's",p:"~$2,099",v:2099}]},
+  {id:75, type:"louvered",    wind:75, brand:"Mirador",               name:"80S Louvered Pergola",         size:"10×20 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (confirmed)",r:1385.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Costco",p:"$3,399",v:3399,best:true},{r:"Lowe's",p:"~$3,499",v:3499}]},
+  {id:76, type:"louvered",    wind:70, brand:"Purple Leaf",           name:"Louvered Aluminum Pergola",    size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"$1,699",v:1699,best:true},{r:"Lowe's",p:"~$1,799",v:1799}]},
+  {id:77, type:"louvered",    wind:70, brand:"Purple Leaf",           name:"Louvered Aluminum Pergola",    size:"12×20 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Home Depot",p:"$3,449",v:3449,best:true},{r:"Walmart",p:"~$3,399",v:3399}]},
+  {id:78, type:"louvered",    wind:50, brand:"Erommy",                name:"Motorized Louvered Pergola w/ LED",size:"10×13 ft",isBD:false,sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"~$1,299",v:1299,best:true},{r:"Amazon",p:"~$1,399",v:1399}]},
+  {id:79, type:"louvered",    wind:35, brand:"Nordivale",             name:"Louvered Pergola",             size:"10×10 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Lowe's",p:"~$399",v:399,best:true},{r:"Walmart",p:"~$399",v:399}]},
+
+  // ── GRILL GAZEBOS ──
+  {id:80, type:"grill",       wind:50, brand:"ShelterLogic / Sojag",  name:"Dakota BBQ Grill Gazebo",      size:"6×9 ft",   isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$370",v:370,best:true},{r:"Direct",p:"~$399",v:399}]},
+  {id:81, type:"grill",       wind:50, brand:"Sunjoy",                name:"Cedar Frame Grill Gazebo",     size:"12×10 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct (sunjoyshop.com)",p:"~$949",v:949,best:true},{r:"Home Depot",p:"~$987",v:987},{r:"Amazon",p:"~$999",v:999}]},
+  {id:82, type:"grill",       wind:50, brand:"Erommy",                name:"BBQ Louvered Grill Pergola",   size:"8×10 ft",  isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"~$499",v:499,best:true},{r:"Amazon",p:"~$549",v:549}]},
+  {id:83, type:"grill",       wind:50, brand:"SunVilla",              name:"Grill Pergola w/ Louvered Roof",size:"6×9 ft",  isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"From $999",v:999,best:true}]},
+
+  // ── BAR GAZEBOS ──
+  {id:84, type:"bar",         wind:65, brand:"Yardistry",             name:"Cantina Cedar Bar Gazebo",     size:"7.6×7.6 ft",isBD:false,sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Costco",p:"$1,499",v:1499,best:true},{r:"Direct",p:"$1,999",v:1999}]},
+  {id:85, type:"bar",         wind:50, brand:"ShelterLogic / Sojag",  name:"Barilo Bar Gazebo",            size:"9×9 ft",   isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$969",v:969,best:true},{r:"Direct",p:"~$999",v:999}]},
+  {id:86, type:"bar",         wind:35, brand:"Keter",                 name:"Signature Collection Bar Gazebo",size:"11×7 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Sam's Club",p:"~$899",v:899,best:true},{r:"Direct",p:"~$999",v:999}]},
+
+  // ── SUNJOY — ADDITIONAL MODELS ──
+  {id:100,type:"woodgazebo",  wind:50, brand:"Sunjoy",               name:"Cedar Frame 2-Tier Hardtop Gazebo", size:"11×11 ft", isBD:false, sonoranRate:775,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$923",v:923,best:true},{r:"Lowe's",p:"~$1,023",v:1023},{r:"Direct (sunjoyshop.com)",p:"~$923",v:923,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:101,type:"woodgazebo",  wind:50, brand:"Sunjoy",               name:"Cedar Frame 2-Tier Hardtop Gazebo", size:"13×11 ft", isBD:false, sonoranRate:775,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$1,503",v:1503,best:true},{r:"Direct (sunjoyshop.com)",p:"~$1,503",v:1503,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:102,type:"woodgazebo",  wind:50, brand:"Sunjoy",               name:"Cedar Frame Steel 2-Tier Hardtop Gazebo",size:"12×16 ft",isBD:false,sonoranRate:850,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 16ft+"}],
+   prices:[{r:"Home Depot",p:"$1,589",v:1589,best:true},{r:"Lowe's",p:"~$1,699",v:1699},{r:"Direct (sunjoyshop.com)",p:"~$1,589",v:1589,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:103,type:"woodgazebo",  wind:50, brand:"Sunjoy",               name:"Cedar Frame Steel 2-Tier Hardtop Gazebo",size:"12×20 ft",isBD:false,sonoranRate:1200,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Home Depot",p:"$1,451",v:1451,best:true},{r:"Home Depot (Brown)",p:"$1,657",v:1657},{r:"Direct (sunjoyshop.com)",p:"~$1,451",v:1451,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:104,type:"metalgazebo", wind:50, brand:"Sunjoy",               name:"Kingston Hardtop Gazebo — Woodgrain Aluminum",size:"20×12 ft",isBD:false,sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Home Depot",p:"$1,644",v:1644,best:true},{r:"Direct (sunjoyshop.com)",p:"~$1,644",v:1644,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:105,type:"metalgazebo", wind:50, brand:"Sunjoy",               name:"Heavy-Duty Steel Hardtop Gazebo",   size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$871",v:871,best:true},{r:"Direct (sunjoyshop.com)",p:"~$871",v:871,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:106,type:"composite",   wind:50, brand:"Sunjoy",               name:"Aurora Cedar Frame + Polycarbonate Roof Gazebo",size:"9×9 ft",isBD:false,sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$1,054",v:1054,best:true},{r:"Direct (sunjoyshop.com)",p:"~$1,054",v:1054,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:107,type:"grill",       wind:50, brand:"Sunjoy",               name:"Churchill Cedar Framed Grill Gazebo w/ Power Port",size:"8×12 ft",isBD:false,sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$622",v:622,best:true},{r:"Home Depot (Brown)",p:"$687",v:687},{r:"Direct (sunjoyshop.com)",p:"~$622",v:622,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+  {id:108,type:"metalpergola",wind:50, brand:"Sunjoy",               name:"Dylon Arched Roof Pergola w/ Adjustable Canopy",size:"10×12 ft",isBD:false,sonoranRate:700,
+   assemblyComps:[{n:"Go Configure",r:750},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$923",v:923,best:true},{r:"Direct (sunjoyshop.com)",p:"~$923",v:923,url:"https://sunjoyshop.com/collections/outdoor-gazebo-for-sale"}]},
+
+  // ── SLOPED ROOF / LEAN-TO ──
+  {id:90, type:"slopedRoof",  wind:100,brand:"Backyard Discovery",    name:"Arcadia Slope Roof Gazebo/Carport",size:"20×9.5 ft",isBD:true,sonoranRate:1200,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Direct",p:"From $2,499",v:2499,best:true},{r:"Wayfair",p:"~$2,699",v:2699}]},
+  {id:91, type:"slopedRoof",  wind:100,brand:"Backyard Discovery",    name:"Kingsport Slope Roof Carport", size:"20×12 ft", isBD:true,  sonoranRate:1200,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1099,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Direct",p:"From $2,999",v:2999,best:true},{r:"Lowe's",p:"~$3,199",v:3199}]},
+  {id:92, type:"slopedRoof",  wind:80, brand:"Aecojoy",               name:"Lean-To Hardtop Gazebo",       size:"14×10 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Walmart",p:"~$320",v:320,best:true},{r:"Amazon",p:"~$380",v:380}]},
+  {id:93, type:"slopedRoof",  wind:80, brand:"Aecojoy",               name:"Lean-To Hardtop Gazebo",       size:"20×12 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Direct",p:"~$859",v:859,best:true},{r:"Amazon",p:"~$899",v:899}]},
+  {id:94, type:"slopedRoof",  wind:60, brand:"SunVilla",              name:"Drift Lean-To Gazebo",         size:"10×14 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$2,099",v:2099,best:true}]},
+
+  // ── POLYCARBONATE / COMPOSITE ──
+  {id:95, type:"composite",   wind:75, brand:"Canopia by Palram",     name:"Roma Polycarbonate Gazebo",    size:"12×14 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$1,678",v:1678,best:true},{r:"Lowe's",p:"~$1,700",v:1700}]},
+  {id:96, type:"composite",   wind:56, brand:"Canopia by Palram",     name:"Palermo Polycarbonate Gazebo", size:"12×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Home Depot",p:"$1,046",v:1046,best:true},{r:"Lowe's",p:"~$1,050",v:1050}]},
+  {id:97, type:"composite",   wind:50, brand:"ShelterLogic / Sojag",  name:"Meridien Polycarbonate Gazebo",size:"10×12 ft", isBD:false, sonoranRate:750,
+   assemblyComps:[{n:"Go Configure",r:781.25,note:"≤15ft only"},{n:"HandyBuddy",r:895.95}],
+   prices:[{r:"Direct",p:"$480",v:480,best:true},{r:"Home Depot",p:"~$549",v:549}]},
+  {id:98, type:"composite",   wind:56, brand:"Canopia by Palram",     name:"Dallas Polycarbonate Gazebo",  size:"12×20 ft", isBD:false, sonoranRate:900,
+   assemblyComps:[{n:"HandyBuddy (est.)",r:1295.95,note:"Go Configure doesn't service 20ft+"}],
+   prices:[{r:"Home Depot",p:"$3,042",v:3042,best:true},{r:"Wayfair",p:"~$3,100",v:3100}]},
+];
+
+/* ─────────────────────────
+   SHARED NAV HTML
+───────────────────────── */
+function renderNav(activePage) {
+  const pages = [
+    {href:"structures.html", label:"Compare Structures"},
+    {href:"wind-guide.html",  label:"Wind Guide"},
+    {href:"anchoring.html",   label:"Anchoring"},
+  ];
+  document.getElementById('site-nav').innerHTML = `
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sonoran <span>Structures</span></a>
+      <nav class="nav-links">
+        ${pages.map(p=>`<a href="${p.href}" class="${activePage===p.href?'active':''}">${p.label}</a>`).join('')}
+        <a href="book.html" class="nav-cta">Book Install</a>
+      </nav>
+    </div>`;
+}
+
+/* ─────────────────────────
+   SHARED FOOTER HTML
+───────────────────────── */
+function renderFooter() {
+  document.getElementById('site-footer').innerHTML = `
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Sonoran <span>Structures</span></div>
+        <div class="footer-tagline">America's Most Complete Outdoor Structure Comparison</div>
+        <div class="footer-sub">Installation by All in 1ne Handyman LLC · Licensed · Bonded · Insured</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-head">Browse</div>
+          ${CATEGORIES.map(c=>`<a href="${c.slug}.html">${c.emoji} ${c.label}</a>`).join('')}
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">Services</div>
+          <a href="wind-guide.html">Wind Rating Guide</a>
+          <a href="anchoring.html">Anchoring Services</a>
+          <a href="book.html">Book Install</a>
+          <a href="book.html">Assembly Only</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">Contact</div>
+          <a href="tel:16232747754">(623) 274-7754</a>
+          <a href="mailto:info@allin1nehandyman.com">info@allin1nehandyman.com</a>
+          <a href="https://www.allin1nehandyman.com" target="_blank">All in 1ne Handyman LLC</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sonoran Structures · sonoranstructures.com</div>`;
+}
+
+/* ─────────────────────────
+   PRODUCT CARD
+───────────────────────── */
+function buildCard(p) {
+  const bestPrice = p.prices.find(pr=>pr.best) || p.prices[0];
+  const col = catColor(p.type);
+  return `
+  <div class="product-card" id="card-${p.id}">
+    <div class="card-head">
+      <div class="card-badges">
+        <span class="badge-cert" style="background:${col}20;color:${col};border:1px solid ${col}40">
+          ${(CATEGORIES.find(c=>c.type===p.type)||{emoji:''}).emoji} ${p.type.replace('gazebo','Gazebo').replace('pergola','Pergola').replace('slopedRoof','Sloped').replace('composite','Poly').replace('louvered','Louvered').replace('grill','Grill').replace('bar','Bar').replace('wood','Wood').replace('metal','Metal')}
+        </span>
+        ${p.isBD?'<span class="badge-dealer">🏅 Authorized Dealer</span>':''}
+      </div>
+      <div class="card-brand">${p.brand}</div>
+      <div class="card-name">${p.name}</div>
+      <div class="card-size">📐 ${p.size}</div>
+    </div>
+    <div class="card-wind">
+      <div class="wind-row">
+        <span class="wind-mph" style="color:${windColor(p.wind)}">${p.wind} mph</span>
+        <span class="wind-label" style="color:${windColor(p.wind)}">${windLabel(p.wind)}</span>
+      </div>
+      <div class="wind-bar-track"><div class="wind-bar-fill" style="width:${Math.min(p.wind/110*100,100)}%;background:${windColor(p.wind)}"></div></div>
+      <div class="wind-note">Wind rating when properly anchored</div>
+    </div>
+    <div class="card-prices">
+      <div class="prices-label">Click a price to see our total</div>
+      ${p.prices.map(pr=>`
+        <button class="price-row ${pr.best?'price-best':''}" onclick="openModal(${p.id},'${pr.r}','${pr.p}',${pr.v||0})">
+          <span class="price-retailer">${pr.r}</span>
+          <span class="price-val">${pr.p} ↗</span>
+        </button>`).join('')}
+      ${p.isBD?`<div class="dealer-note" onclick="openModal(${p.id},'${bestPrice.r}','${bestPrice.p}',${bestPrice.v||0})">💰 Authorized dealer — ask about pricing</div>`:''}
+    </div>
+  </div>`;
+}
+
+/* ─────────────────────────
+   PURCHASE MODAL
+───────────────────────── */
+let _modalProduct = null;
+let _modalRetailer = '';
+let _modalPrice = '';
+let _modalValue = 0;
+let _anchoring = false;
+
+function openModal(productId, retailer, price, value) {
+  _modalProduct  = PRODUCTS.find(p=>p.id===productId);
+  _modalRetailer = retailer;
+  _modalPrice    = price;
+  _modalValue    = value;
+  _anchoring     = false;
+  renderModal();
+  document.getElementById('purchase-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('purchase-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleAnchoring() {
+  _anchoring = !_anchoring;
+  renderModal();
+}
+
+function renderModal() {
+  const p   = _modalProduct;
+  if(!p) return;
+  const tax      = Math.round(_modalValue * AZ_TAX);
+  const prodT    = _modalValue + tax;
+  const asm      = p.sonoranRate||750;
+  const anchAmt  = _anchoring ? 120 : 0;
+  const ourTotal = prodT + asm + anchAmt;
+  const compMax  = p.assemblyComps.length ? Math.max(...p.assemblyComps.map(c=>c.r)) : 900;
+  const savings  = (prodT + compMax + 175) - ourTotal;
+
+  const payUrl = PAYMENT_LINKS.buy;
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-header">
+      <div class="modal-eyebrow">Before You Purchase</div>
+      <div class="modal-title">${p.brand} — ${p.name}</div>
+      <div class="modal-sub">${p.size} · ${_modalRetailer}: ${_modalPrice}</div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      ${p.isBD ? `
+      <div class="modal-badge-bd">
+        <span>🏅</span>
+        <div><strong>Authorized Backyard Discovery Dealer</strong><br>We carry this product through our dealer account at competitive pricing.</div>
+      </div>` : `
+      <div class="modal-badge-gen">
+        <span>🏗️</span>
+        <div><strong>We Install Every Major Brand</strong><br>See what assembly costs elsewhere — then see how we compare.</div>
+      </div>`}
+
+      <div class="modal-table">
+        <div class="modal-row"><span>Structure — ${_modalRetailer}</span><span>${_modalPrice}</span></div>
+        <div class="modal-row alt"><span>Est. AZ sales tax (~8.3%)</span><span>+$${tax.toLocaleString()}</span></div>
+        <div class="modal-row subtotal"><span>Your product cost</span><span>$${prodT.toLocaleString()}</span></div>
+
+        <div class="modal-section-head red">⚠️ Competitor assembly pricing</div>
+        ${p.assemblyComps.map((c,i)=>`
+          <div class="modal-row ${i%2===0?'red-alt':'red-dim'}">
+            <span>${c.n}${c.note?` <em>(${c.note})</em>`:''}</span>
+            <span class="red-val">+$${c.r.toLocaleString()}</span>
+          </div>`).join('')}
+        <div class="modal-row red-dim"><span>Masonry anchoring (most installs)</span><span class="red-val">+~$175</span></div>
+        <div class="modal-row red-total"><span>Est. total — other installers</span><span>$${(prodT+compMax+175).toLocaleString()}+</span></div>
+
+        <div class="modal-section-head green">✅ Sonoran Structures — complete pricing</div>
+        <div class="modal-row"><span>Product cost (incl. tax)</span><span>$${prodT.toLocaleString()}</span></div>
+        <div class="modal-row alt"><span>Professional assembly</span><span class="clay-val">+$${asm.toLocaleString()}</span></div>
+        <div class="modal-row">
+          <span>⚓ Masonry anchoring ($30/leg · 4 legs)</span>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span class="clay-val">${_anchoring?'+$120':'—'}</span>
+            <div class="anch-toggle ${_anchoring?'on':''}" onclick="toggleAnchoring()"><div class="anch-knob"></div></div>
+          </div>
+        </div>
+        ${['📦 Storage until install day','🚚 Delivery to your home','🗑️ Box & packaging disposal'].map((l,i)=>
+          `<div class="modal-row ${i%2===1?'alt':''}"><span>${l}</span><span class="green-val">FREE</span></div>`
+        ).join('')}
+        <div class="modal-total-row">
+          <div>
+            <div class="total-label">Your total with Sonoran Structures</div>
+            <div class="total-save">Save $${savings.toLocaleString()}+ vs. highest competitor</div>
+          </div>
+          <div class="total-amount">$${ourTotal.toLocaleString()}</div>
+        </div>
+      </div>
+
+      <a href="${payUrl}" target="_blank" class="modal-cta-primary">
+        Purchase Through Us — $${ourTotal.toLocaleString()} total
+      </a>
+      <button class="modal-cta-secondary" onclick="closeModal();window.location.href='book.html?path=assembly'">
+        Already own this structure? Book assembly →
+      </button>
+      <div class="modal-note">Licensed · Bonded · Insured · (623) 274-7754</div>
+    </div>`;
+}
+
+/* ─────────────────────────
+   CATEGORY STATS HELPER
+───────────────────────── */
+function getCatStats(type) {
+  const prods = PRODUCTS.filter(p=>p.type===type);
+  if(!prods.length) return {count:0,minWind:0,maxWind:0,minPrice:'TBD'};
+  const winds  = prods.map(p=>p.wind);
+  const prices = prods.flatMap(p=>p.prices.map(pr=>pr.v)).filter(v=>v>0);
+  const minP   = prices.length ? Math.min(...prices) : 0;
+  return {
+    count:   prods.length,
+    minWind: Math.min(...winds),
+    maxWind: Math.max(...winds),
+    minPrice: minP ? '$'+minP.toLocaleString() : 'TBD',
+  };
+}
+
+renderNav(activePage) {
+  const pages = [
+    {href:"structures.html", label:"Compare Structures"},
+    {href:"wind-guide.html",  label:"Wind Guide"},
+    {href:"anchoring.html",   label:"Anchoring"},
+  ];
+  document.getElementById('site-nav').innerHTML = `
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sonoran <span>Structures</span></a>
+      <nav class="nav-links">
+        ${pages.map(p=>`<a href="${p.href}" class="${activePage===p.href?'active':''}">${p.label}</a>`).join('')}
+        <a href="book.html" class="nav-cta">Book Install</a>
+      </nav>
+    </div>`;
+}
+
+/* ─────────────────────────
+   SHARED FOOTER HTML
+───────────────────────── */
+function renderFooter() {
+  document.getElementById('site-footer').innerHTML = `
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Sonoran <span>Structures</span></div>
+        <div class="footer-tagline">America's Most Complete Outdoor Structure Comparison</div>
+        <div class="footer-sub">Installation by All in 1ne Handyman LLC · Licensed · Bonded · Insured</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-head">Browse</div>
+          ${CATEGORIES.map(c=>`<a href="${c.slug}.html">${c.emoji} ${c.label}</a>`).join('')}
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">Services</div>
+          <a href="wind-guide.html">Wind Rating Guide</a>
+          <a href="anchoring.html">Anchoring Services</a>
+          <a href="book.html">Book Install</a>
+          <a href="book.html">Assembly Only</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">Contact</div>
+          <a href="tel:16232747754">(623) 274-7754</a>
+          <a href="mailto:info@allin1nehandyman.com">info@allin1nehandyman.com</a>
+          <a href="https://www.allin1nehandyman.com" target="_blank">All in 1ne Handyman LLC</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sonoran Structures · sonoranstructures.com</div>`;
+}
+
+/* ─────────────────────────
+   PRODUCT CARD
+───────────────────────── */
+function buildCard(p) {
+  const bestPrice = p.prices.find(pr=>pr.best) || p.prices[0];
+  const col = catColor(p.type);
+  return `
+  <div class="product-card" id="card-${p.id}">
+    <div class="card-head">
+      <div class="card-badges">
+        <span class="badge-cert" style="background:${col}20;color:${col};border:1px solid ${col}40">
+          ${(CATEGORIES.find(c=>c.type===p.type)||{emoji:''}).emoji} ${p.type.replace('gazebo','Gazebo').replace('pergola','Pergola').replace('slopedRoof','Sloped').replace('composite','Poly').replace('louvered','Louvered').replace('grill','Grill').replace('bar','Bar').replace('wood','Wood').replace('metal','Metal')}
+        </span>
+        ${p.isBD?'<span class="badge-dealer">🏅 Authorized Dealer</span>':''}
+      </div>
+      <div class="card-brand">${p.brand}</div>
+      <div class="card-name">${p.name}</div>
+      <div class="card-size">📐 ${p.size}</div>
+    </div>
+    <div class="card-wind">
+      <div class="wind-row">
+        <span class="wind-mph" style="color:${windColor(p.wind)}">${p.wind} mph</span>
+        <span class="wind-label" style="color:${windColor(p.wind)}">${windLabel(p.wind)}</span>
+      </div>
+      <div class="wind-bar-track"><div class="wind-bar-fill" style="width:${Math.min(p.wind/110*100,100)}%;background:${windColor(p.wind)}"></div></div>
+      <div class="wind-note">Wind rating when properly anchored</div>
+    </div>
+    <div class="card-prices">
+      <div class="prices-label">Click a price to see our total</div>
+      ${p.prices.map(pr=>`
+        <button class="price-row ${pr.best?'price-best':''}" onclick="openModal(${p.id},'${pr.r}','${pr.p}',${pr.v||0})">
+          <span class="price-retailer">${pr.r}</span>
+          <span class="price-val">${pr.p} ↗</span>
+        </button>`).join('')}
+      ${p.isBD?`<div class="dealer-note" onclick="openModal(${p.id},'${bestPrice.r}','${bestPrice.p}',${bestPrice.v||0})">💰 Authorized dealer — ask about pricing</div>`:''}
+    </div>
+  </div>`;
+}
+
+/* ─────────────────────────
+   PURCHASE MODAL
+───────────────────────── */
+let _modalProduct = null;
+let _modalRetailer = '';
+let _modalPrice = '';
+let _modalValue = 0;
+let _anchoring = false;
+
+function openModal(productId, retailer, price, value) {
+  _modalProduct  = PRODUCTS.find(p=>p.id===productId);
+  _modalRetailer = retailer;
+  _modalPrice    = price;
+  _modalValue    = value;
+  _anchoring     = false;
+  renderModal();
+  document.getElementById('purchase-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('purchase-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleAnchoring() {
+  _anchoring = !_anchoring;
+  renderModal();
+}
+
+function renderModal() {
+  const p   = _modalProduct;
+  if(!p) return;
+  const tax      = Math.round(_modalValue * AZ_TAX);
+  const prodT    = _modalValue + tax;
+  const asm      = p.sonoranRate||750;
+  const anchAmt  = _anchoring ? 120 : 0;
+  const ourTotal = prodT + asm + anchAmt;
+  const compMax  = p.assemblyComps.length ? Math.max(...p.assemblyComps.map(c=>c.r)) : 900;
+  const savings  = (prodT + compMax + 175) - ourTotal;
+
+  const payUrl = PAYMENT_LINKS.buy;
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-header">
+      <div class="modal-eyebrow">Before You Purchase</div>
+      <div class="modal-title">${p.brand} — ${p.name}</div>
+      <div class="modal-sub">${p.size} · ${_modalRetailer}: ${_modalPrice}</div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      ${p.isBD ? `
+      <div class="modal-badge-bd">
+        <span>🏅</span>
+        <div><strong>Authorized Backyard Discovery Dealer</strong><br>We carry this product through our dealer account at competitive pricing.</div>
+      </div>` : `
+      <div class="modal-badge-gen">
+        <span>🏗️</span>
+        <div><strong>We Install Every Major Brand</strong><br>See what assembly costs elsewhere — then see how we compare.</div>
+      </div>`}
+
+      <div class="modal-table">
+        <div class="modal-row"><span>Structure — ${_modalRetailer}</span><span>${_modalPrice}</span></div>
+        <div class="modal-row alt"><span>Est. AZ sales tax (~8.3%)</span><span>+$${tax.toLocaleString()}</span></div>
+        <div class="modal-row subtotal"><span>Your product cost</span><span>$${prodT.toLocaleString()}</span></div>
+
+        <div class="modal-section-head red">⚠️ Competitor assembly pricing</div>
+        ${p.assemblyComps.map((c,i)=>`
+          <div class="modal-row ${i%2===0?'red-alt':'red-dim'}">
+            <span>${c.n}${c.note?` <em>(${c.note})</em>`:''}</span>
+            <span class="red-val">+$${c.r.toLocaleString()}</span>
+          </div>`).join('')}
+        <div class="modal-row red-dim"><span>Masonry anchoring (most installs)</span><span class="red-val">+~$175</span></div>
+        <div class="modal-row red-total"><span>Est. total — other installers</span><span>$${(prodT+compMax+175).toLocaleString()}+</span></div>
+
+        <div class="modal-section-head green">✅ Sonoran Structures — complete pricing</div>
+        <div class="modal-row"><span>Product cost (incl. tax)</span><span>$${prodT.toLocaleString()}</span></div>
+        <div class="modal-row alt"><span>Professional assembly</span><span class="clay-val">+$${asm.toLocaleString()}</span></div>
+        <div class="modal-row">
+          <span>⚓ Masonry anchoring ($30/leg · 4 legs)</span>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span class="clay-val">${_anchoring?'+$120':'—'}</span>
+            <div class="anch-toggle ${_anchoring?'on':''}" onclick="toggleAnchoring()"><div class="anch-knob"></div></div>
+          </div>
+        </div>
+        ${['📦 Storage until install day','🚚 Delivery to your home','🗑️ Box & packaging disposal'].map((l,i)=>
+          `<div class="modal-row ${i%2===1?'alt':''}"><span>${l}</span><span class="green-val">FREE</span></div>`
+        ).join('')}
+        <div class="modal-total-row">
+          <div>
+            <div class="total-label">Your total with Sonoran Structures</div>
+            <div class="total-save">Save $${savings.toLocaleString()}+ vs. highest competitor</div>
+          </div>
+          <div class="total-amount">$${ourTotal.toLocaleString()}</div>
+        </div>
+      </div>
+
+      <a href="${payUrl}" target="_blank" class="modal-cta-primary">
+        Purchase Through Us — $${ourTotal.toLocaleString()} total
+      </a>
+      <button class="modal-cta-secondary" onclick="closeModal();window.location.href='book.html?path=assembly'">
+        Already own this structure? Book assembly →
+      </button>
+      <div class="modal-note">Licensed · Bonded · Insured · (623) 274-7754</div>
+    </div>`;
+}
+
+/* ─────────────────────────
+   CATEGORY STATS HELPER
+───────────────────────── */
+function getCatStats(type) {
+  const prods = PRODUCTS.filter(p=>p.type===type);
+  if(!prods.length) return {count:0,minWind:0,maxWind:0,minPrice:'TBD'};
+  const winds  = prods.map(p=>p.wind);
+  const prices = prods.flatMap(p=>p.prices.map(pr=>pr.v)).filter(v=>v>0);
+  const minP   = prices.length ? Math.min(...prices) : 0;
+  return {
+    count:   prods.length,
+    minWind: Math.min(...winds),
+    maxWind: Math.max(...winds),
+    minPrice: minP ? '$'+minP.toLocaleString() : 'TBD',
+  };
+}
+
+renderNav(activePage) {
+  const pages = [
+    {href:"structures.html", label:"Compare Structures"},
+    {href:"wind-guide.html",  label:"Wind Guide"},
+    {href:"anchoring.html",   label:"Anchoring"},
+  ];
+  document.getElementById('site-nav').innerHTML = `
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Sonoran <span>Structures</span></a>
+      <nav class="nav-links">
+        ${pages.map(p=>`<a href="${p.href}" class="${activePage===p.href?'active':''}">${p.label}</a>`).join('')}
+        <a href="book.html" class="nav-cta">Book Install</a>
+      </nav>
+    </div>`;
+}
+
+/* ─────────────────────────
+   SHARED FOOTER HTML
+───────────────────────── */
+function renderFooter() {
+  document.getElementById('site-footer').innerHTML = `
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Sonoran <span>Structures</span></div>
+        <div class="footer-tagline">America's Most Complete Outdoor Structure Comparison</div>
+        <div class="footer-sub">Installation by All in 1ne Handyman LLC · Licensed · Bonded · Insured</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <div class="footer-col-head">Browse</div>
+          ${CATEGORIES.map(c=>`<a href="${c.slug}.html">${c.emoji} ${c.label}</a>`).join('')}
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">Services</div>
+          <a href="wind-guide.html">Wind Rating Guide</a>
+          <a href="anchoring.html">Anchoring Services</a>
+          <a href="book.html">Book Install</a>
+          <a href="book.html">Assembly Only</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-head">Contact</div>
+          <a href="tel:16232747754">(623) 274-7754</a>
+          <a href="mailto:info@allin1nehandyman.com">info@allin1nehandyman.com</a>
+          <a href="https://www.allin1nehandyman.com" target="_blank">All in 1ne Handyman LLC</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Sonoran Structures · sonoranstructures.com</div>`;
+}
+
+/* ─────────────────────────
+   PRODUCT CARD
+───────────────────────── */
+function buildCard(p) {
+  const bestPrice = p.prices.find(pr=>pr.best) || p.prices[0];
+  const col = catColor(p.type);
+  return `
+  <div class="product-card" id="card-${p.id}">
+    <div class="card-head">
+      <div class="card-badges">
+        <span class="badge-cert" style="background:${col}20;color:${col};border:1px solid ${col}40">
+          ${(CATEGORIES.find(c=>c.type===p.type)||{emoji:''}).emoji} ${p.type.replace('gazebo','Gazebo').replace('pergola','Pergola').replace('slopedRoof','Sloped').replace('composite','Poly').replace('louvered','Louvered').replace('grill','Grill').replace('bar','Bar').replace('wood','Wood').replace('metal','Metal')}
+        </span>
+        ${p.isBD?'<span class="badge-dealer">🏅 Authorized Dealer</span>':''}
+      </div>
+      <div class="card-brand">${p.brand}</div>
+      <div class="card-name">${p.name}</div>
+      <div class="card-size">📐 ${p.size}</div>
+    </div>
+    <div class="card-wind">
+      <div class="wind-row">
+        <span class="wind-mph" style="color:${windColor(p.wind)}">${p.wind} mph</span>
+        <span class="wind-label" style="color:${windColor(p.wind)}">${windLabel(p.wind)}</span>
+      </div>
+      <div class="wind-bar-track"><div class="wind-bar-fill" style="width:${Math.min(p.wind/110*100,100)}%;background:${windColor(p.wind)}"></div></div>
+      <div class="wind-note">Wind rating when properly anchored</div>
+    </div>
+    <div class="card-prices">
+      <div class="prices-label">Click a price to see our total</div>
+      ${p.prices.map(pr=>`
+        <button class="price-row ${pr.best?'price-best':''}" onclick="openModal(${p.id},'${pr.r}','${pr.p}',${pr.v||0})">
+          <span class="price-retailer">${pr.r}</span>
+          <span class="price-val">${pr.p} ↗</span>
+        </button>`).join('')}
+      ${p.isBD?`<div class="dealer-note" onclick="openModal(${p.id},'${bestPrice.r}','${bestPrice.p}',${bestPrice.v||0})">💰 Authorized dealer — ask about pricing</div>`:''}
+    </div>
+  </div>`;
+}
+
+/* ─────────────────────────
+   PURCHASE MODAL
+───────────────────────── */
+let _modalProduct = null;
+let _modalRetailer = '';
+let _modalPrice = '';
+let _modalValue = 0;
+let _anchoring = false;
+
+function openModal(productId, retailer, price, value) {
+  _modalProduct  = PRODUCTS.find(p=>p.id===productId);
+  _modalRetailer = retailer;
+  _modalPrice    = price;
+  _modalValue    = value;
+  _anchoring     = false;
+  renderModal();
+  document.getElementById('purchase-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('purchase-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function toggleAnchoring() {
+  _anchoring = !_anchoring;
+  renderModal();
+}
+
+function renderModal() {
+  const p   = _modalProduct;
+  if(!p) return;
+  const tax      = Math.round(_modalValue * AZ_TAX);
+  const prodT    = _modalValue + tax;
+  const asm      = p.sonoranRate||750;
+  const anchAmt  = _anchoring ? 120 : 0;
+  const ourTotal = prodT + asm + anchAmt;
+  const compMax  = p.assemblyComps.length ? Math.max(...p.assemblyComps.map(c=>c.r)) : 900;
+  const savings  = (prodT + compMax + 175) - ourTotal;
+
+  const payUrl = PAYMENT_LINKS.buy;
+
+  document.getElementById('modal-content').innerHTML = `
+    <div class="modal-header">
+      <div class="modal-eyebrow">Before You Purchase</div>
+      <div class="modal-title">${p.brand} — ${p.name}</div>
+      <div class="modal-sub">${p.size} · ${_modalRetailer}: ${_modalPrice}</div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      ${p.isBD ? `
+      <div class="modal-badge-bd">
+        <span>🏅</span>
+        <div><strong>Authorized Backyard Discovery Dealer</strong><br>We carry this product through our dealer account at competitive pricing.</div>
+      </div>` : `
+      <div class="modal-badge-gen">
+        <span>🏗️</span>
+        <div><strong>We Install Every Major Brand</strong><br>See what assembly costs elsewhere — then see how we compare.</div>
+      </div>`}
+
+      <div class="modal-table">
+        <div class="modal-row"><span>Structure — ${_modalRetailer}</span><span>${_modalPrice}</span></div>
+        <div class="modal-row alt"><span>Est. AZ sales tax (~8.3%)</span><span>+$${tax.toLocaleString()}</span></div>
+        <div class="modal-row subtotal"><span>Your product cost</span><span>$${prodT.toLocaleString()}</span></div>
+
+        <div class="modal-section-head red">⚠️ Competitor assembly pricing</div>
+        ${p.assemblyComps.map((c,i)=>`
+          <div class="modal-row ${i%2===0?'red-alt':'red-dim'}">
+            <span>${c.n}${c.note?` <em>(${c.note})</em>`:''}</span>
+            <span class="red-val">+$${c.r.toLocaleString()}</span>
+          </div>`).join('')}
+        <div class="modal-row red-dim"><span>Masonry anchoring (most installs)</span><span class="red-val">+~$175</span></div>
+        <div class="modal-row red-total"><span>Est. total — other installers</span><span>$${(prodT+compMax+175).toLocaleString()}+</span></div>
+
+        <div class="modal-section-head green">✅ Sonoran Structures — complete pricing</div>
+        <div class="modal-row"><span>Product cost (incl. tax)</span><span>$${prodT.toLocaleString()}</span></div>
+        <div class="modal-row alt"><span>Professional assembly</span><span class="clay-val">+$${asm.toLocaleString()}</span></div>
+        <div class="modal-row">
+          <span>⚓ Masonry anchoring ($30/leg · 4 legs)</span>
+          <div style="display:flex;align-items:center;gap:10px">
+            <span class="clay-val">${_anchoring?'+$120':'—'}</span>
+            <div class="anch-toggle ${_anchoring?'on':''}" onclick="toggleAnchoring()"><div class="anch-knob"></div></div>
+          </div>
+        </div>
+        ${['📦 Storage until install day','🚚 Delivery to your home','🗑️ Box & packaging disposal'].map((l,i)=>
+          `<div class="modal-row ${i%2===1?'alt':''}"><span>${l}</span><span class="green-val">FREE</span></div>`
+        ).join('')}
+        <div class="modal-total-row">
+          <div>
+            <div class="total-label">Your total with Sonoran Structures</div>
+            <div class="total-save">Save $${savings.toLocaleString()}+ vs. highest competitor</div>
+          </div>
+          <div class="total-amount">$${ourTotal.toLocaleString()}</div>
+        </div>
+      </div>
+
+      <a href="${payUrl}" target="_blank" class="modal-cta-primary">
+        Purchase Through Us — $${ourTotal.toLocaleString()} total
+      </a>
+      <button class="modal-cta-secondary" onclick="closeModal();window.location.href='book.html?path=assembly'">
+        Already own this structure? Book assembly →
+      </button>
+      <div class="modal-note">Licensed · Bonded · Insured · (623) 274-7754</div>
+    </div>`;
+}
+
+/* ─────────────────────────
+   CATEGORY STATS HELPER
+───────────────────────── */
+function getCatStats(type) {
+  const prods = PRODUCTS.filter(p=>p.type===type);
+  if(!prods.length) return {count:0,minWind:0,maxWind:0,minPrice:'TBD'};
+  const winds  = prods.map(p=>p.wind);
+  const prices = prods.flatMap(p=>p.prices.map(pr=>pr.v)).filter(v=>v>0);
+  const minP   = prices.length ? Math.min(...prices) : 0;
+  return {
+    count:   prods.length,
+    minWind: Math.min(...winds),
+    maxWind: Math.max(...winds),
+    minPrice: minP ? '$'+minP.toLocaleString() : 'TBD',
+  };
+}
+renderNav('wind-guide.html');
+renderFooter();
+</script>
+</body>
+</html>
